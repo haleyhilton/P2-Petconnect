@@ -1,5 +1,5 @@
 -- DROP DATABASE
-DROP DATABASE IF EXISTS petfinder_db;
+DROP DATABASE IF EXISTS petconnect_db;
 
 -- CREATE DATABASE
-CREATE DATABASE petfinder_db;
+CREATE DATABASE petconnect_db;

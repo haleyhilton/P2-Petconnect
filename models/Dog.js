@@ -44,6 +44,10 @@ Dog.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    for_sale: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
