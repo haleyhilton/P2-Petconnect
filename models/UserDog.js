@@ -1,3 +1,5 @@
+//THIS MODEL WILL ONLY BE USED IF WE DECIDE TO IMPLEMENT 
+
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
