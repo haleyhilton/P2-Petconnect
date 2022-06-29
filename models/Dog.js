@@ -16,6 +16,13 @@ Dog.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        capitalize(value) {
+          const str = value;
+          const str2 = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+          return str2
+        }
+      }
     },
     age: {
         type: DataTypes.INTEGER,
@@ -27,6 +34,13 @@ Dog.init(
     breed: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          capitalize(value) {
+            const str = value;
+            const str2 = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+            return str2
+          }
+        }
     },
     size: {
         type: DataTypes.STRING,
@@ -35,10 +49,16 @@ Dog.init(
     sex: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isIn: [['male', 'female']]
+        }
     },
     color: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isLowercase: true,
+        }
     },
     description: {
       type: DataTypes.STRING,
@@ -46,6 +66,10 @@ Dog.init(
     },
     for_sale: {
       type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    media: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     user_id: {
