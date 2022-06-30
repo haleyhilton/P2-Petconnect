@@ -58,6 +58,10 @@ User.init(
           len: [5,5]
         }
     },
+    media_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {
