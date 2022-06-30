@@ -59,7 +59,7 @@ User.init(
         }
     },
     media_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
