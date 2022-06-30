@@ -31,6 +31,9 @@ Dog.init(
     size: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isIn: [['small', 'medium', 'large']]
+        }
     },
     sex: {
         type: DataTypes.STRING,
@@ -55,7 +58,7 @@ Dog.init(
       allowNull: false,
     },
     media_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     user_id: {
