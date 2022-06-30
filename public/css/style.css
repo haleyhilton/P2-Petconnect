@@ -1,0 +1,80 @@
+/* TODO: Change Fonts, color and add background to login page */
+/* Styling for login.hbs */
+/* ================================================ */
+/* ================================================ */
+/* Styling for split menu look */
+.splitMenu-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+
+
+/* ================================================ */
+/* ================================================ */
+/* Styling for Login container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 200px;
+}
+
+#fbLoginbtn {
+
+}
+
+
+
+/* ================================================ */
+/* ================================================ */
+/* Styling for SignUp container */
+.signUp-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+     top: 200px;
+     border-style: solid;
+     border-radius: 20px;
+     padding: 60px;
+}
+
+#signUpBtn {
+    position: relative;
+    top: 60px;
+}
+
+p {
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+/* ================================================ */
+/* ================================================ */
+/* Styling for buttons */
+
+button {
+    border-radius: 25px;
+    padding: 20px 50px 20px 50px;
+    margin: 15px;
+    font-size: 20px;
+}
+
+
+
+/* ================================================ */
+/* ================================================ */
+/* Styling for input boxes */
+#inputField {
+   border-radius: 25px;
+   text-align: center;
+   margin: 15px;
+   padding: 20px 100px 20px 100px;
+
+}
