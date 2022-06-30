@@ -54,7 +54,7 @@ Dog.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    media: {
+    media_id: {
       type: DataTypes.STRING,
       allowNull: false,
     },
