@@ -38,24 +38,10 @@ User.init(
     first_name: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          capitalize(value) {
-            const str = value;
-            const str2 = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-            return str2
-          }
-        }
     },
     last_name: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          capitalize(value) {
-            const str = value;
-            const str2 = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-            return str2
-          }
-        }
     },
     date_of_birth: {
         type: DataTypes.DATE,
@@ -74,6 +60,16 @@ User.init(
     },
   },
   {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      }, 
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,

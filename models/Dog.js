@@ -16,13 +16,6 @@ Dog.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        capitalize(value) {
-          const str = value;
-          const str2 = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-          return str2
-        }
-      }
     },
     age: {
         type: DataTypes.INTEGER,
@@ -34,13 +27,6 @@ Dog.init(
     breed: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          capitalize(value) {
-            const str = value;
-            const str2 = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-            return str2
-          }
-        }
     },
     size: {
         type: DataTypes.STRING,
@@ -82,6 +68,18 @@ Dog.init(
     },
   },
   {
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        const str = newUserData.name;
+        const str2 = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+        return str2
+      }, 
+      beforeUpdate: async (updatedUserData) => {
+          const str = updatedUserData.name;
+          const str2 = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+          return str2
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
