@@ -118,6 +118,19 @@ root {
   .masthead .masthead-subheading {
     font-size: 1.25rem;
   }
+
+  input.empty {
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: inherit;
+    padding: 1rem;
+    font-size: 22px;
+    line-height: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-top: 2rem;
+  
+}
   
   .page-section {
     padding: 6rem 0;
