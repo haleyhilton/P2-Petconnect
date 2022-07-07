@@ -8,7 +8,7 @@ const Media = require('./Media');
 
 // Users have many Dogs
 User.hasMany(Dog, {
-  foreignKey: "user_id"
+  foreignKey: "user_id",
 });
 
 //Users have many profile pictures
