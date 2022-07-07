@@ -22,7 +22,7 @@ Media.init(
       allowNull: true,
       references: {
         model: 'user',
-        key: 'media_id',
+        key: 'id',
       },
     },
     dog_id: {
@@ -30,7 +30,7 @@ Media.init(
       allowNull: true,
       references: {
         model: 'dog',
-        key: 'media_id',
+        key: 'id',
       },
     },
   },
@@ -39,7 +39,7 @@ Media.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "media",
+    modelName: 'media',
   }
 );
 
