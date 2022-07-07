@@ -4,6 +4,7 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const session = require('express-session');
 const multer = require('multer')
+const path = require('path');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -42,6 +43,8 @@ app.use(routes);
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', './views');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 sequelize.sync().then(() => {
     app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
