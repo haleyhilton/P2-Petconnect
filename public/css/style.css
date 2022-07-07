@@ -305,10 +305,10 @@ root {
 /* ================================================ */
 /* Styling for split menu look */
 .splitMenu-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
 }
 
 
@@ -317,11 +317,11 @@ root {
 /* ================================================ */
 /* Styling for Login container */
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 200px;
 }
 
 #fbLoginbtn {
@@ -334,24 +334,24 @@ root {
 /* ================================================ */
 /* Styling for SignUp container */
 .signUp-container {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     position: relative;
-     top: 200px;
-     border-style: solid;
-     border-radius: 20px;
-     padding: 60px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+   top: 200px;
+   border-style: solid;
+   border-radius: 20px;
+   padding: 60px;
 }
 
 #signUpBtn {
-    position: relative;
-    top: 60px;
+  position: relative;
+  top: 60px;
 }
 
 p {
-    font-size: 25px;
-    text-align: center;
+  font-size: 25px;
+  text-align: center;
 }
 
 
@@ -361,10 +361,10 @@ p {
 /* Styling for buttons */
 
 button {
-    border-radius: 25px;
-    padding: 20px 50px 20px 50px;
-    margin: 15px;
-    font-size: 20px;
+  border-radius: 25px;
+  padding: 20px 50px 20px 50px;
+  margin: 15px;
+  font-size: 20px;
 }
 
 
@@ -373,9 +373,9 @@ button {
 /* ================================================ */
 /* Styling for input boxes */
 #inputField {
-   border-radius: 25px;
-   text-align: center;
-   margin: 15px;
-   padding: 20px 100px 20px 100px;
+ border-radius: 25px;
+ text-align: center;
+ margin: 15px;
+ padding: 20px 100px 20px 100px;
 
 }
