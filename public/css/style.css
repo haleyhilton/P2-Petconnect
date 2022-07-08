@@ -320,8 +320,8 @@ root {
 .splitMenu-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  
+  justify-content: space-between;
+  margin: 200px;
 }
 
 
@@ -333,8 +333,6 @@ root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  top: 200px;
 }
 
 #fbLoginbtn {
@@ -350,8 +348,6 @@ root {
    display: flex;
    flex-direction: column;
    align-items: center;
-   position: relative;
-   top: 200px;
    border-style: solid;
    border-radius: 20px;
    padding: 60px;
@@ -398,33 +394,96 @@ button {
 /* ================================================ */
 /* Styling for profile.handlebars */
 
-.container {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-around; */
-}
-
 .profile-picture {
   display: flex;
   align-items: center;
-  margin: 50px;
-  border-style: solid;
+  margin: 100px;
+  position: relative;
+  right: 175px;
   width: 300px;
   height: 300px;
 }
 
-.bio {
+#picture {
   border-style: solid;
-  height: 250px;
-  width: 800px;
-  margin: 50px;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  border-color: #251b68;
 }
 
-.user-dogs {
+#profile-name {
+  position: relative;
+  bottom: 35px;
+  right: 85px;
+  white-space: nowrap;
+}
+
+#rating {
+  position: relative;
+  bottom: 135px;
+  left: 155px;
+}
+
+/* Styling for map container */
+
+.map-container {
+  height: 400px;
+  width: 800px;
+  text-align: center;
+  position: relative;
+  left: 450px;
+  bottom: 400px;
+  
+}
+
+img {
+  border-style: solid;
+  height: 400px;
+  width: 800px;
+  object-fit: fill;
+}
+
+/* Styling for Bio section */
+
+.bio {
+  position: relative;
+  bottom: 150px;
+  right: 15px;
+  border-style: solid;
+  height: 250px;
+  width: 1200px;
+}
+
+/* Styling for dog for sell container */
+.userDog-container {
+    border-style: solid;
+    border-radius: 15px;
+    height: fit-content;
+    width: 1400px;
+    text-align: center;
+    margin: auto;
+    margin-top: 250px;
+    margin-bottom: 200px;
+}
+
+#userDog-title {
+  margin-bottom: 100px;
+  padding: 15px;
+  color: white;
+  background-color: #251b68;
+  border-radius: 10px;
+}
+
+.dogs {
     display: flex;
     justify-content: space-evenly;
-    border-style: solid;
-    height: 350px;
-    width: 1200px;
+    align-self: flex-end;
+    margin-bottom: 25px;
+}
 
+/* Styling for contact form button */
+#contactBtn {
+  text-align: center;
+  margin-bottom: 25px;
 }
