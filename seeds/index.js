@@ -1,6 +1,7 @@
 const seedDogs = require('./dog-seeds');
 const seedUser = require('./user-seeds');
 const seedUserdog = require('./userdog-seeds');
+const seedMedia = require('./media-seeds');
 
 
 const sequelize = require('../config/connection');
@@ -11,11 +12,14 @@ const seedAll = async () => {
   await seedDogs();
   console.log('\n----- DOGS SEEDED -----\n');
 
-  await seedUsers();
+  await seedUser();
   console.log('\n----- USERS SEEDED -----\n');
 
-  await seedUserdogs();
+  await seedUserdog();
   console.log('\n----- TAGS SEEDED -----\n');
+
+  await seedMedia();
+  console.log('\n----- MEDIA SEEDED -----\n');
 
 
   process.exit(0);

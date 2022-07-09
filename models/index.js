@@ -39,4 +39,5 @@ module.exports = {
   User,
   Dog,
   UserDog,
+  Media
 };
