@@ -18,7 +18,6 @@
  }
  .dog:before {
   content: '';
-  display: block;
   position: absolute;
   width: 120%;
   height: 120%;
@@ -166,7 +165,6 @@
  }
  .dog-eyes:before {
   content: '';
-  display: block;
   height: 30px;
   width: 30px;
   border-radius: 50px;
@@ -244,9 +242,9 @@
 
  .dog-muzzle:before, .dog-muzzle:after {
    content: '';
-   display: block;
    position: absolute;
  }
+
  .dog-muzzle:before {
   width: 6px;
   height: 20px;
@@ -315,12 +313,10 @@
  .dog-tongue:before {
   content: '';
   position: absolute;
-  display: block;
   width: 100%;
   height: 100%;
   border-radius: 40px;
   background: #e85e809e;
-  /* -webkit-animation: dog-tongue-inner 100ms ease-in-out infinite alternate; */
  }
  @-webkit-keyframes dog-tongue-inner {
    from {
