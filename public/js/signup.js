@@ -25,7 +25,7 @@ const signupFormHandler = async (event) => {
             });
 
             if (andLogInResponse.ok) {
-                document.location.replace('/profile');
+                document.location.replace('/');
             } else {
                 alert('Failed to log in');
             };
