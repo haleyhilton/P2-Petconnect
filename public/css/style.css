@@ -242,7 +242,6 @@ root {
   .search .search-item {
     cursor: pointer;
     position: relative;
-    display: block;
     max-width: 25rem;
     border-radius: 0.5rem;
     overflow: hidden;
