@@ -44,11 +44,6 @@ router.post('/login', async (req, res) => {
 
 //post route for creating new users
 router.post('/signup', async (req, res) => {
-    /* body example:
-    {
-        "username": "example_username",
-        "password": "example_password"
-    } */
     try {
         User.create(req.body).then((user) => {
             res.status(200).json(user);
