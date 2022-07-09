@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const multer = require('multer');
-const { Media } = require('../../models');
+const { Media, User, Dog } = require('../../models');
 const path = require('path');
 
 const fileStorageEngine = multer.diskStorage({
@@ -24,7 +24,7 @@ router.post('/', upload.single("image"), async(req, res) => {
     console.log(req.file.filename)
     let fileName = `./public/media/${req.file.filename}`;
     console.log(typeof(fileName))
-    const media = await Media.create({ picture_url: fileName })
+    const media = await Media.create({ picture_url: fileName, user_id: User.id, dog_id: Dog.id })
     // req.file.buffer
     media.save();
     res.send('Image Uploaded');

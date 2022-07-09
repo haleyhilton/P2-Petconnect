@@ -22,8 +22,8 @@ const seedAll = async () => {
   await seedMedia();
   console.log('\n----- MEDIA SEEDED -----\n');
 
-
   process.exit(0);
 };
 
 seedAll();
+
