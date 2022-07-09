@@ -12,4 +12,16 @@ router.get('/', async (req, res) => {
     }
 });
 
+// SEARCH AND FILTER UNDER CONSTRUCTION
+
+router.get('/', async (req, res) => {
+    try {
+        
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+// END OF CONSTRUCTION
+
 module.exports = router;
