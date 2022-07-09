@@ -11,7 +11,6 @@ const dogData = [
         color: 'Brown',
         description: 'Tara is a very loving and energetic pup! Hates children',
         for_sale: true,
-        user_id: 1,
     },
     {
         id: 2,
@@ -23,7 +22,6 @@ const dogData = [
         color: 'Blonde',
         description: 'Hates children but really loves cats',
         for_sale: true,
-        user_id: 2,
     },
     {
         id: 3,
@@ -35,7 +33,6 @@ const dogData = [
         color: 'Grey',
         description: 'Bingo Was his name-o',
         for_sale: true,
-        user_id: 3,
     },
     {
         id: 4,
@@ -47,7 +44,6 @@ const dogData = [
         color: 'Brown',
         description: 'Zara is a healthy baby girl',
         for_sale: true,
-        user_id: 4,
     },
     {
         id: 5,
@@ -59,7 +55,6 @@ const dogData = [
         color: 'Brown',
         description: 'Nala is a beautiful girl',
         for_sale: true,
-        user_id: 5,
     },
     {
         id: 6,
@@ -71,7 +66,6 @@ const dogData = [
         color: 'Black',
         description: 'Zipp zapp patty wack',
         for_sale: true,
-        user_id: 6,
     },
     {
         id: 7,
@@ -83,7 +77,6 @@ const dogData = [
         color: 'Grey',
         description: 'Reading Rainbow Pink Pink Pink',
         for_sale: true,
-        user_id: 7,
     },
     {
         id: 8,
@@ -95,7 +88,6 @@ const dogData = [
         color: 'Brown',
         description: 'Scout can see you...',
         for_sale: true,
-        user_id: 8,
     },
 
 ];
