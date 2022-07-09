@@ -42,6 +42,22 @@ router.post('/login', async (req, res) => {
       }
 });
 
+//post route for creating new users
+router.post('/signup', async (req, res) => {
+    /* body example:
+    {
+        "username": "example_username",
+        "password": "example_password"
+    } */
+    try {
+        User.create(req.body).then((user) => {
+            res.status(200).json(user);
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 //route for logging out
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
