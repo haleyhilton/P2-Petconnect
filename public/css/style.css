@@ -437,12 +437,13 @@ button {
   
 }
 
-img {
+#map-display {
   border-style: solid;
   height: 400px;
   width: 800px;
   object-fit: fill;
 }
+
 
 /* Styling for Bio section */
 
@@ -480,6 +481,13 @@ img {
     justify-content: space-evenly;
     align-self: flex-end;
     margin-bottom: 25px;
+}
+
+#dog-profile {
+  border-style: solid;
+  height: 400px;
+  width: 800px;
+  object-fit: fill;
 }
 
 /* Styling for contact form button */
