@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require("../config/connection.js");
+const sequelize = require('../config/connection.js');
 
 class Media extends Model {}
 
@@ -16,6 +16,9 @@ Media.init(
     picture_url: {
       type: DataTypes.STRING,
       allowNull: false,
+      // image: {
+      //   type: Buffer
+      // }
     },
     user_id: {
       type: DataTypes.INTEGER,

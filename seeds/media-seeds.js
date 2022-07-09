@@ -12,8 +12,8 @@ const mediaData = [
         dog_id: 2
     },
     {
-        picture_url: 'a url',
         user_id: 3,
+        picture_url: 'a url',
         dog_id: 3
     },
     {
@@ -44,6 +44,6 @@ const mediaData = [
 
 ];
 
-const seedMedia = () => Media.bulkCreate(userMedia);
+const seedMedia = () => Media.bulkCreate(mediaData);
 
 module.exports = seedMedia;

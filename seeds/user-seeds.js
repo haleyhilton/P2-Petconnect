@@ -2,6 +2,7 @@ const { User } = require('../models');
 
 const userData = [
     {
+        id: 1,
         username: 'alvindogs',
         password: 'alvinpass',
         email: 'alvin@gmail.com',
@@ -12,6 +13,7 @@ const userData = [
         media_id: 1
     },
     {
+        id: 2,
         username: 'lupitadogs',
         password: 'lupitapass',
         email: 'lupita@gmail.com',
@@ -22,6 +24,7 @@ const userData = [
         media_id: 2
     },
     {
+        id: 3,
         username: 'rossdogs',
         password: 'rosspass',
         email: 'ross@gmail.com',
@@ -32,6 +35,7 @@ const userData = [
         media_id: 3
     },
     {
+        id: 4,
         username: 'russelldogs',
         password: 'russelpass',
         email: 'russell@gmail.com',
@@ -42,6 +46,7 @@ const userData = [
         media_id: 4
     },
     {
+        id: 5,
         username: 'bobbydogs',
         password: 'bobbypass',
         email: 'bobby@gmail.com',
@@ -52,6 +57,7 @@ const userData = [
         media_id: 5
     },
     {
+        id: 6,
         username: 'bryandogs',
         password: 'bryanpass',
         email: 'bryan@gmail.com',
@@ -62,6 +68,7 @@ const userData = [
         media_id: 6
     },
     {
+        id: 7,
         username: 'cookydoedogs',
         password: 'sarapass',
         email: 'sara@gmail.com',
@@ -72,6 +79,7 @@ const userData = [
         media_id: 7
     },
     {
+        id: 8,
         username: 'kyledogs',
         password: 'kylepass',
         email: 'kyle@gmail.com',

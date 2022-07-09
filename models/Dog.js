@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
+const dogBreedList = require('../public/arrays/dogBreeds');
 
 const sequelize = require('../config/connection.js');
 
@@ -27,6 +28,9 @@ Dog.init(
     breed: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isIn: [dogBreedList]
+        }
     },
     size: {
         type: DataTypes.STRING,
@@ -57,18 +61,18 @@ Dog.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    media_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
+    // media_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'user',
+    //     key: 'id',
+    //   },
+    // },
   },
   {
     hooks: {
