@@ -1,6 +1,6 @@
 const seedDogs = require('./dog-seeds');
-const seedUsers = require('./user-seeds');
-const seedUserdogs = require('./userdog-seeds');
+const seedUser = require('./user-seeds');
+const seedUserDog = require('./userdog-seeds');
 const seedMedia = require('./media-seeds');
 
 
@@ -10,13 +10,13 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
 
-  await seedUsers();
-  console.log('\n----- USERS SEEDED -----\n');
-
   await seedDogs();
   console.log('\n----- DOGS SEEDED -----\n');
 
-  await seedUserdogs();
+  await seedUser();
+  console.log('\n----- USERS SEEDED -----\n');
+
+  await seedUserDog();
   console.log('\n----- TAGS SEEDED -----\n');
 
   await seedMedia();
@@ -26,3 +26,4 @@ const seedAll = async () => {
 };
 
 seedAll();
+

@@ -2,6 +2,7 @@ const { Dog } = require('../models');
 
 const dogData = [
     {
+        id: 1,
         name: 'Tara',
         age: 1,
         breed: 'rhodesian ridgeback',
@@ -13,6 +14,7 @@ const dogData = [
         user_id: 1,
     },
     {
+        id: 2,
         name: 'Fido',
         age: 1,
         breed: 'corgi',
@@ -24,6 +26,7 @@ const dogData = [
         user_id: 2,
     },
     {
+        id: 3,
         name: 'Bingo',
         age: 1,
         breed: 'husky',
@@ -35,6 +38,7 @@ const dogData = [
         user_id: 3,
     },
     {
+        id: 4,
         name: 'Zara',
         age: 1,
         breed: 'german shepard',
@@ -46,6 +50,7 @@ const dogData = [
         user_id: 4,
     },
     {
+        id: 5,
         name: 'Nala',
         age: 1,
         breed: 'rhodesian ridgeback',
@@ -57,6 +62,7 @@ const dogData = [
         user_id: 5,
     },
     {
+        id: 6,
         name: 'Zipp',
         age: 1,
         breed: 'border collie',
@@ -68,6 +74,7 @@ const dogData = [
         user_id: 6,
     },
     {
+        id: 7,
         name: 'Pinkie',
         age: 1,
         breed: 'great dane',
@@ -79,6 +86,7 @@ const dogData = [
         user_id: 7,
     },
     {
+        id: 8,
         name: 'Scout',
         age: 1,
         breed: 'beagle',

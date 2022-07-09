@@ -7,9 +7,9 @@ const Media = require('./Media');
 // The code below is for dogs that have been created by a user and dogs that the user owns.
 
 // Users have many Dogs
-User.hasMany(Dog, {
-  foreignKey: "user_id",
-});
+// User.hasMany(Dog, {
+//   foreignKey: "user_id",
+// });
 
 // Each Dog belongs to a User
 Dog.belongsTo(User, {
@@ -40,19 +40,19 @@ Media.belongsTo(Dog, {
 
 // User belongs to many Dog (through UserDog)
 User.belongsToMany(Dog, { 
-  through: "user_dog",
-  foreignKey: "user_id"
+  through: UserDog,
+  foreignKey: "dog_id"
 });
 
 // Dog belongs to many User (through UserDog)
 Dog.belongsToMany(User, {
-  through: "user_dog",
-  foreignKey: "dog_id"
+  through: UserDog,
+  foreignKey: "user_id"
 });
 
 module.exports = {
   User,
   Dog,
   UserDog,
-  Media,
+  Media
 };

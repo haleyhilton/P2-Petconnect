@@ -16,6 +16,9 @@ Media.init(
     picture_url: {
       type: DataTypes.STRING,
       allowNull: false,
+      // image: {
+      //   type: Buffer
+      // }
     },
     user_id: {
       type: DataTypes.INTEGER,
