@@ -2,39 +2,23 @@ let dogButton = document.querySelectorAll('.dogNameOf')
 let invisibleModal = document.querySelector('.blankModal')
 
 // Let eventID = event.target.datatype
-// Datatype will be {{userid}}?
+// Datatype will be {{userid}}? data attributes = userid
+let media = urlsouce
 
-
-function dogModal(){
-invisibleModal.textContent = `<div>
-<a class="nav-link conB" data-toggle="modal" data-target="#exampleModal"><button>Modal Click</button></a>
-<div id="myModal" class="modal">
-  <div class="modal-ccontent">
-    <span class="close">&times;</span>
-    <form class="formP">
-      <fieldset>
-
-        <div class="form-group">
-          <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">${{useriddogphoto}}</small>
-        </div>
-
-        <div class="form-group">
-          <label for="exampleTextarea" class="form-label mt-4">${{dogdetail}}</label>
-          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </fieldset>
-    </form>
-  </div>
-
+function dogModal() {
+  display.removeblock
+  invisibleModal.textContent = `{{#each dog as |dog|}}
+<div class="Center-Block Absolute-Center is-Fixed is-Variable Modal" id="Fixed-Modal">
+<div class="Center-Content">
+  <h4 class="Title"><img src {{media.picture_url}}></h4>
+  <p>{{userdog.dog.description}}</p><br>
+  <p><a href="#" class="button toggle-Modal toUppercase">Close</a></p>
 </div>
 </div>
 <script src="modal.js"></script>`
 }
+// how do we get the proper information to display
+
 
 // CODE FOR MODAL
 let modal = document.querySelector('.modal')
@@ -62,10 +46,10 @@ window.onclick = function (event) {
 
 
 // Simple show/hide modal
-$(".toggle-Modal").on("click",function(e){
-	$(".Modal-Background").toggleClass("is-Hidden");
-	e.preventDefault();
-	e.stopPropagation();
-	return false;
+$(".toggle-Modal").on("click", function (e) {
+  $(".Modal-Background").toggleClass("is-Hidden");
+  e.preventDefault();
+  e.stopPropagation();
+  return false;
 });
 
