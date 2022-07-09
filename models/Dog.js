@@ -61,10 +61,6 @@ Dog.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    media_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,

@@ -57,11 +57,7 @@ User.init(
           isNumeric: true,
           len: [5,5]
         }
-    },
-    media_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    }
   },
   {
     hooks: {

@@ -44,6 +44,6 @@ const mediaData = [
 
 ];
 
-const seedMedia = () => Media.bulkCreate(userMedia);
+const seedMedia = () => Media.bulkCreate(mediaData);
 
 module.exports = seedMedia;
