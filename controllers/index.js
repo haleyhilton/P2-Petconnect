@@ -8,6 +8,7 @@ const loginRoutes = require('./loginRoutes');
 const profileRoutes = require('./profileRoutes');
 const resultsRoutes = require('./resultsRoutes');
 const searchRoutes = require('./searchRoutes');
+const signupRoutes = require('./signupRoutes');
 
 router.use('/api', apiRoutes);
 router.use('/error', errorRoutes);
@@ -17,5 +18,6 @@ router.use('/login', loginRoutes);
 router.use('/profile', profileRoutes);
 router.use('/results', resultsRoutes);
 router.use('/search', searchRoutes);
+router.use('/signup', signupRoutes);
 
 module.exports = router;
