@@ -59,3 +59,13 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
+
+
+// Simple show/hide modal
+$(".toggle-Modal").on("click",function(e){
+	$(".Modal-Background").toggleClass("is-Hidden");
+	e.preventDefault();
+	e.stopPropagation();
+	return false;
+});
+

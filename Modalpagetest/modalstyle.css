@@ -1,58 +1,118 @@
-/* MODAL BEGINS */
+.Absolute-Center {
+    height: 40%;
+    width: 40%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 
-.formP {
+
+.Center-Container {
+    position: relative;
+}
+
+
+.Absolute-Center.is-Fixed {
+    position: fixed;
+    z-index: 999;
+}
+
+
+.Absolute-Center.is-Responsive {
+    width: 60%;
+    height: 60%;
+    min-width: 200px;
+    max-width: 400px;
     padding: 40px;
 }
 
-.divide {
-    display: flex;
-    justify-content: center;
-}
 
-.bigBlock {
-    border: 2px;
-    border-color: black;
-    border-style: solid;
+.Absolute-Center.is-Right {
+    left: auto;
+    right: 20px;
+    text-align: right;
 }
 
 
+.Absolute-Center.is-Left {
+    right: auto;
+    left: 20px;
+    text-align: left;
+}
 
-.modal {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
+
+.Absolute-Center.is-Image {
+    width: 50%;
+    height: auto;
+    padding: 0;
+}
+
+.Absolute-Center.is-Image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.Absolute-Center.is-Overflow {
+    height: 250px;
+    max-height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
-
-.modal-ccontent {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 75%;
-    font-family: monospace;
-
+.Center-Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20%;
 }
 
-
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
+.button {
     text-decoration: none;
-    cursor: pointer;
+    padding: 1rem 3rem;
+    border: solid 1px #ffc107;
+    border-radius: 10rem;
+    background: #ffc107;}
+
+
+.Absolute-Center.is-Resizable {
+    min-width: 20%;
+    max-width: 90%;
+    min-height: 20%;
+    max-height: 80%;
+    resize: both;
 }
 
-/* END OF MODAL */
+.Center-Container {
+    background: rgb(244, 237, 227);
+    color: #ffc107;
+    width: 100%;
+    height: 400px;
+    margin: 20px auto 40px;
+    clear: both;
+}
+
+.Center-Block {
+    background: rgb(244, 237, 227);
+    color: #ffc107;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.Center-Block .Title {
+    padding: 0;
+    margin: 0 0 .5em;
+    line-height: 1em;
+}
+
+.toggle-Modal {
+    cursor: pointer;   
+}
+
+.toUppercase {
+    text-transform: uppercase;
+}
+
