@@ -28,9 +28,6 @@ User.init(
     password: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          is: /^[0-9a-f]{64}$/i
-        }
     },
     email: {
       type: DataTypes.STRING,
