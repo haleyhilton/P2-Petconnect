@@ -1,16 +1,16 @@
 <!-- Login page to be rendered on load of application -->
-<div class="splitMenu-container">
+<div class="splitMenu-container" id="login">
 <!-- ==================================================================================== -->
 <!-- ==================================================================================== -->
 <!-- This will be the login form box for the application -->
 
   <div class="login-container"> 
 
-    <h1>Login to your account</h1>
+    <h1 >Login to your account</h1>
    <input id="inputField email-login" type="text" placeholder="Username" name="userName" required>
    <input id="inputField password-login" type="text" placeholder="Password" name="passWord" required>
    <button type="submit">Login</button>
-   <button id="fbLoginbtn" type="submit">Login with FaceBook</button>
+<div class="fb-login-button" data-width="30" data-size="medium" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true"></div>
 
   </div>
 <!-- ==================================================================================== -->
@@ -22,7 +22,7 @@
   <h1>New Here?</h1>
   <p>Well then you should join us obviously</p>
   
-  <button id="signUpBtn" type="submit">Sign Up</button>
+  <button id="signUpBtn">Sign Up</button>
 
   </div>
 

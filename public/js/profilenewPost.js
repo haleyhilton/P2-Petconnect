@@ -1,42 +1,34 @@
 // This will be where we fetch the Post methods and replace (dynamiclly) the sections of the page
 // that need to be replaced. 
 
+// To access modal
+const newPostModal = document.querySelector('.newPostModal')
+// access the button that will open the modal for user to input information
+const newPostBtn = document.querySelector('#newPostBtn');
+// Access to the span element that will give the user the option to close the modal
+const closeSpan = document.querySelector('.close');
 
-const newFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const name = document.querySelector('#post-name').value.trim();
-    const description = document.querySelector('#post-desc').value.trim();
-  
-    if (name && description) {
-      const response = await fetch(`/api/post`, {
-        method: 'POST',
-        body: JSON.stringify({ name, description }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  console.log(true)
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to create post');
-      }
+newPostBtn.addEventListener('click', function() {
+    newPostModal.style.display = "block"
+});
+
+// to either close modal or click out of modal to close it
+closeSpan.addEventListener('click', function() {
+     newPostModal.style.display = "none"
+});
+
+window.addEventListener('click', function(e) {
+    if(e.target == newPostModal) {
+        newPostModal.style.display = "none"
     }
-  };
-  
-  const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/post/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to delete post');
-      }
-    }
-  };
+})
+
+// TODO: need help figuring out syntax to get inputs to post in my friends section of profile page
+const newDogPost = async (data) => {
+
+    const dogName = document.querySelector('#DogsName').value.trim();
+    const dogDob = document.querySelector('#dob').value.trim();
+    const dogBreed = document.querySelector('#breed').value.trim();
+    const dogSex = document.querySelectorAll('input[name="dogSex"]:checked').value;
+
+}
