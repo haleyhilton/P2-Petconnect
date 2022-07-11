@@ -1,5 +1,5 @@
 const test = async () => {
-    const sessy = await fetch('/api/users/sess', {
+    const sessy = await fetch('/api/sess', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
     });
