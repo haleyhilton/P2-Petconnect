@@ -14,6 +14,22 @@ router.get('/', async (req, res) => {
     }
 });
 
+//basic get by id route
+router.get('/:id', async (req, res) => {
+  try {
+      const allUserData = await User.findAll({
+          include: [{ model: Dog }],
+          where: {
+            id: req.params.id,
+          },
+      });
+      console.log(allUserData);
+      res.status(200).json(allUserData);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 //route for logging in
 router.post('/login', async (req, res) => {
     try {
