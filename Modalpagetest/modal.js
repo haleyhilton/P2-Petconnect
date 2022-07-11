@@ -6,7 +6,7 @@ let invisibleModal = document.querySelector('.blankModal')
 let media = urlsouce
 
 function dogModal() {
-  display.removeblock
+  invisibleModal.style.display = 'block';
   invisibleModal.textContent = `{{#each dog as |dog|}}
 <div class="Center-Block Absolute-Center is-Fixed is-Variable Modal" id="Fixed-Modal">
 <div class="Center-Content">
