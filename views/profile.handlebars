@@ -10,16 +10,53 @@
  <h5 id="rating">Rating: ⭐️⭐️⭐️⭐️⭐️</h5>
 
  {{!-- Possible api map showing location based of zip code with map displayed --}}
-<div class="map-container">
+{{!-- <div class="map-container">
    <img id="map-display" src="https://www.kpmindustries.com/wp-content/uploads/2018/08/Placeholder-Map-Image.png">
+</div> --}}
+
+<div class="newPostModal-container">
+        <button id="newPostBtn">New post</button>
+      <div id="newPostModal" class="newPostModal">
+         <div class="postModal-content">
+            <span class="close">&times;</span>
+            <h1>New Dog Post!</h1>
+            <div>
+               {{>dogupload}}
+               <form class="newPost">
+                   <div class="form-group">
+                     <label for="frstname">Dog's Name: </label>
+                     <input class="form-input" type="text" id="DogsName"/>
+                   </div>
+                   <div class="form-group">
+                     <label for="dob">DOB: </label>
+                     <input class="form-input" type="text" id="dob"/>
+                   </div>
+                   <div class="form-group">
+                     <label for="breed">Breed type: </label>
+                     <input class="form-input" type="text" id="breed"/>
+                   </div>
+                   <div class="form-group">
+                     <label for="dogSex">Sex: </label>
+                     <input class="form-input" type="radio" name="dogSex" value="male"> Male <br>
+                     <input class="form-input" type="radio" name="dogSex" value="female"> Female <br>
+                     <button id="postBtn" type="submit">Post!</button>
+                   </div>
+               </form>
+            </div>
+         </div>
+      </div>
 </div>
 
 
 
 
 {{!-- Bio section for profile page  --}}
+{{!-- TODO: need to have in the models an ability to save and edit user bio --}}
  <div class="bio">
-    <p>This is where user Bio will go</p>
+    <h1>Bio</h1>
+    <div id="bioInput">
+      <p></p>
+    </div>
     <h3>Zip code: user.zipcode</h3>
  </div>
 </div>
