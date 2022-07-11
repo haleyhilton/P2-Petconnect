@@ -1,11 +1,13 @@
 const router = require('express').Router();
 const { User, Dog } = require('../../models');
 
+//basic get all users route
 router.get('/', async (req, res) => {
     try {
         const allUserData = await User.findAll({
             include: [{ model: Dog }],
         });
+        console.log(allUserData);
         res.status(200).json(allUserData);
     } catch (err) {
         res.status(500).json(err);
