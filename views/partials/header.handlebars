@@ -10,17 +10,39 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#Home">Home</a>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/#topPage">Home</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                         href="#Search">Search</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                         href="#contact">Contact</a></li>
                 {{#if logged_in}}
-                <li class="nav-item mx-0 mx-lg-1" id="logout">logout</li>
+                {{!-- <li class="nav-item mx-0 mx-lg-1"><button id="logout">Logout</button></li> --}}
+                <li class="nav-item mx-0 mx-lg-1"> 
+                    <div class="dropdown">
+                     <button class="dropbtn"><a><img src="https://picsum.photos/200/300?random=1" alt="Avatar" class="avatar"></a></button>
+                     <div class="dropdown-content">
+                     <a href="#">My Profile</a>
+                     <a href="#">Settings</a>
+                     <a href="#logout">logout</a>
+                    </div>
+                  </div>
+                </li>
 
                 {{else}}
-                <a href="/login">login</a>
+                {{!-- Commented out for testing purposes only! David Rios --}}
+                  
+                {{!-- <div class="dropdown">
+                    <button class="dropbtn"><a href="/login#login"><img src="https://picsum.photos/200/300?random=1" alt="Avatar" class="avatar"></a></button>
+                    <div class="dropdown-content">
+                    <a href="#">My Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">logout</a>
+                   </div>
+                </div> --}}
+                
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                        href="/login#login">Login</a></li>
                 {{/if}}
             </ul>
         </div>
