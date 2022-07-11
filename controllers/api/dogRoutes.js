@@ -15,8 +15,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// SEARCH AND FILTER UNDER CONSTRUCTION
-
+// SEARCH AND FILTER ROUTE
 router.get('/:age-:breed-:size-:sex-:color', async (req, res) => {
     //define filters manually
     let ageParam = req.params.age;
@@ -59,8 +58,6 @@ router.get('/:age-:breed-:size-:sex-:color', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
-
-// END OF CONSTRUCTION
+});
 
 module.exports = router;
