@@ -16,6 +16,7 @@ router.get('/', async (req, res) => {
 });
 
 // SEARCH AND FILTER ROUTE
+// any filter not being used should be 'all'
 router.get('/:age-:breed-:size-:sex-:color', async (req, res) => {
     //define filters manually
     let ageParam = req.params.age;
