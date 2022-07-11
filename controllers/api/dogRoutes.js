@@ -61,4 +61,14 @@ router.get('/:age-:breed-:size-:sex-:color', async (req, res) => {
     }
 });
 
+router.post('/', async (req, res) => {
+    try {
+        Dog.create(req.body).then((dog) => {
+            res.status(200).json(dog);
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
