@@ -20,15 +20,14 @@ const loginFormHandler = async (event) => {
         alert(response.statusText);
       }
     }
-  };
+};
   
   
-  document
-    .querySelector('.login-container')
-    .addEventListener('submit', loginFormHandler);
-  
+document
+  .querySelector('.login-container')
+  .addEventListener('submit', loginFormHandler);
 
-    // Linked signup button to go into sign up page
+// Linked signup button to go into sign up page
 // to got to sign-up page when sign up button clicked
 document.querySelector('#signUpBtn').addEventListener('click', function() {
   console.log("Ive been clicked")
