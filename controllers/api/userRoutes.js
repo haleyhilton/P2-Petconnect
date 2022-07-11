@@ -22,7 +22,6 @@ router.get('/:id', async (req, res) => {
             id: req.params.id,
           },
       });
-      console.log(allUserData);
       res.status(200).json(allUserData);
   } catch (err) {
       res.status(500).json(err);
