@@ -23,8 +23,9 @@
             <span class="close">&times;</span>
             <h1>New Dog Post!</h1>
             <div>
-               {{>dogupload}}
-               <form class="newPost">
+              {{>upload}}
+               {{!-- {{>dogupload}} --}}
+               {{!-- <form class="newPost">
                    <div class="form-group">
                      <label for="dog-name">Dog's Name: </label>
                      <input class="form-input" type="text" id="dog-name"/>
@@ -55,7 +56,7 @@
                    <div class="form-group">
                      <button id="postBtn" type="submit">Post!</button>
                    </div>
-               </form>
+               </form> --}}
             </div>
          </div>
       </div>
@@ -68,7 +69,6 @@
     <h1>Bio</h1>
     <div id="bioInput">
       <p>{{user.bio}}</p>
-      <p>{{dogs.name}}</p>
     </div>
  </div>
 </div>
@@ -79,6 +79,14 @@
    <h1 id="userDog-title">My friends looking for a home</h1>
  <div class="dogs">
     <img id="dog-profile" src="#">
+       <p>Name: {{dog_name}}</p> 
+       <p>Breed: {{dog_breed}}</p> 
+       <p>Age: {{dog_age}}</p> 
+       <p>Size: {{dog_size}}</p> 
+       <p>Sex: {{dog_sex}}</p> 
+       <p>Color: {{dog_color}}</p>  
+       <p>Description: {{dog_description}}</p> 
+       <p>{{#if dog_forsale}}For Sale!!{{/if}}</p>
     {{!-- <img class="dog-profile" src="https://placedog.net/300/300?id=148">
     <img class="dog-profile" src="https://placedog.net/300/300?id=14"> --}}
  </div>
@@ -92,3 +100,4 @@
 
 <script src="/js/profilenewPost.js"></script>
 <script src="/js/profile.js"></script>
+<script src="/js/newDog.js"></script>

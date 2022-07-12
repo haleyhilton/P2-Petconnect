@@ -21,16 +21,13 @@ Dog.init(
     age: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        validate: {
-          isNumeric: true,
-        }
     },
     breed: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          isIn: [dogBreedList]
-        }
+        // validate: {
+        //   isIn: [dogBreedList]
+        // }
     },
     size: {
         type: DataTypes.STRING,
@@ -49,9 +46,6 @@ Dog.init(
     color: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          isLowercase: true,
-        }
     },
     description: {
       type: DataTypes.STRING,
