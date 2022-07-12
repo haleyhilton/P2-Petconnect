@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     });
 
     const user = (userData.map((project) => project.get({ plain: true })))[0];
-    
+    console.log(user)
     res.render('profile', {
         layout: 'main3',
         user,

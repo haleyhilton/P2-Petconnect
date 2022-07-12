@@ -2,7 +2,7 @@ const { Media } = require('../models');
 
 const mediaData = [
     {
-        picture_url: './media/haley.PNG',
+        picture_url: './media/womanwithdog.PNG',
         user_id: 1,
         dog_id: null
     },

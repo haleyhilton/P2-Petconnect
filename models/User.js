@@ -51,9 +51,6 @@ User.init(
     date_of_birth: {
         type: DataTypes.DATE,
         allowNull: false,
-        validate: {
-          isDate: true,
-        }
     },
     zip_code: {
         type: DataTypes.INTEGER,

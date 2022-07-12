@@ -6,8 +6,11 @@
     <img id="picture" src="#">
  </div>
 
- <h3 id="profile-name">{{user.first_name}} {{user.last_name}}</h3>
+
+ <h3 id="profile-name">Welcome, {{user.first_name}} {{user.last_name}}!</h3>
  <h5 id="rating">Rating: ⭐️⭐️⭐️⭐️⭐️</h5>
+ <h6>Email: {{user.email}}</h6>
+ <h6>Zip Code: {{user.zip_code}}</h6>
 
  {{!-- Possible api map showing location based of zip code with map displayed --}}
 {{!-- <div class="map-container">
@@ -15,7 +18,7 @@
 </div> --}}
 
 <div class="newPostModal-container">
-        <button id="newPostBtn">New post</button>
+        <button id="newPostBtn">Add a Dog!</button>
       <div id="newPostModal" class="newPostModal">
          <div class="postModal-content">
             <span class="close">&times;</span>
@@ -60,16 +63,14 @@
 </div>
 
 
-
-
 {{!-- Bio section for profile page  --}}
 {{!-- TODO: need to have in the models an ability to save and edit user bio --}}
  <div class="bio">
     <h1>Bio</h1>
     <div id="bioInput">
-      <p></p>
+      <p>{{user.bio}}</p>
+      <p>{{dogs.name}}</p>
     </div>
-    <h3>Zip code: user.zipcode</h3>
  </div>
 </div>
 
@@ -83,7 +84,7 @@
     <img class="dog-profile" src="https://placedog.net/300/300?id=14"> --}}
  </div>
 </div>
-<div cl
+<div>
 </div>
 
 <div id="contactBtn">
