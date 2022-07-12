@@ -34,11 +34,10 @@
 
     {{>footer}}
 
-
-    <script src="/js/login.js"></script>
-    <script src="/js/signup.js"></script>
+    {{#if logged_in}}
     <script src="/js/logout.js"></script>
-    <script src="/js/profilenewPost.js"></script>
+    {{/if}}
+    
     <script src="/js/facebookLogin.js"></script>
 
 </body>

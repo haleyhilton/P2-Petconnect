@@ -7,6 +7,6 @@ const mediaRoutes = require('./mediaRoutes');
 router.use('/dogs', dogRoutes);
 router.use('/users', userRoutes);
 router.use('/upload', uploadRoutes);
-router.use('/media', mediaRoutes)
+router.use('/media', mediaRoutes);
 
 module.exports = router;

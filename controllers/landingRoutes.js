@@ -14,7 +14,11 @@ router.get('/', async(req, res) => {
         {image: "/images/poodle.png", modal: "modal8"},
         {image: "/images/rotty.png", modal: "modal9"},
         ]
-    res.render('landing', {icons});
+    res.render('landing', {
+        icons,
+        logged_in: req.session.logged_in,
+        user_id: req.session.user_id,
+    });
 })
 
 module.exports = router;
