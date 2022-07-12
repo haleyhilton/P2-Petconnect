@@ -39,4 +39,4 @@ UserDog.init(
   }
 );
 
-module.exports = UserDog;
+/* module.exports = UserDog; */
