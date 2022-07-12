@@ -2,7 +2,7 @@
     <section class="page-section search" id="search">
         <div class="container">
             <!-- Results Section Heading-->
-            <h2 class="page-section-heading text-center texwt-uppercase text-secondary mb-0">Top Breeds</h2>
+            <h2 class="page-section-heading text-center texwt-uppercase text-secondary mb-0" id="topPage">Top Breeds</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -12,123 +12,21 @@
             
             <!-- Search Result Grid Items-->
             <div class="row justify-content-center">
-                <!-- Search Result 1-->
+                {{#each icons as |icon|}}
                 <div class="col-md-6 col-lg-4 mb-5">
                     <div class="search-item mx-auto" 
                     data-toggle="modal" 
-                    data-target="#modal1">
+                    data-target="#{{icon.modal}}">
                         <div
                             class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="search-item-caption-content text-center text-white">
                                 <i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/images/beagle.png" alt="beagle icon" />
+                        <img class="img-fluid" src="{{icon.image}}" alt="beagle icon" />
                     </div>
                 </div>
-                <!-- Search Result 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="search-item mx-auto" 
-                    data-toggle="modal" 
-                    data-target="#modal2">
-                        <div
-                            class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="search-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="/images/bulldog.png" alt="bulldog icon" />
-                    </div>
-                </div>
-                <!-- Search Result 3-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="search-item mx-auto" 
-                    data-toggle="modal" 
-                    data-target="#modal3">
-                        <div
-                            class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="search-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="/images/corgi.png" alt="corgi icon" />
-                    </div>
-                </div>
-                <!-- Search Result 4-->
-                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                    <div class="search-item mx-auto" 
-                    data-toggle="modal" 
-                    data-target="#modal4">
-                        <div
-                            class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="search-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="/images/frenchy.png" alt="french icon" />
-                    </div>
-                </div>
-                <!-- Search Result 5-->
-                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                    <div class="search-item mx-auto" 
-                    data-toggle="modal" 
-                    data-target="#modal5">
-                        <div
-                            class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="search-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="/images/german-s.png" alt="german shepard icon" />
-                    </div>
-                </div>
-                <!-- Search Result 6-->
-                <div class="col-md-6 mb-5 col-lg-4">
-                    <div class="search-item mx-auto" 
-                    data-toggle="modal" 
-                    data-target="#modal6">
-                        <div
-                            class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="search-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="/images/golden.png" alt="golden retriever icon" />
-                    </div>
-                </div>
-                   <!-- Search Result 7-->
-                <div class="col-md-4 col-lg-4 mb-5">
-                    <div class="search-item mx-auto" 
-                    data-toggle="modal" 
-                    data-target="#modal7">
-                        <div
-                            class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="search-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="/images/lab.png" alt="labrador retriever icon" />
-                    </div>
-                </div>
-                   <!-- Search Result 8-->
-                <div class="col-md-4 col-lg-4 mb-5">
-                    <div class="search-item mx-auto" 
-                    data-toggle="modal" 
-                    data-target="#modal8">
-                        <div
-                            class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="search-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="/images/poodle.png" alt="poodle icon" />
-                    </div>
-                </div>
-                   <!-- Search Result 9-->
-                <div class="col-md-4 col-lg-4 mb-5">
-                    <div class="search-item mx-auto" 
-                    data-toggle="modal" 
-                    data-target="#modal9">
-                        <div
-                            class="search-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="search-item-caption-content text-center text-white"><i
-                                    class="fas fa-plus fa-3x"></i></div>
-                        </div>
-                        <img class="img-fluid" src="/images/rotty.png" alt="rottweiler icon" />
-                    </div>
-                </div>
-            </div>
-        </div>
+                {{/each}}
+
+            
     </section>
+    
