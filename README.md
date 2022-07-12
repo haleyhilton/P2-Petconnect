@@ -42,20 +42,20 @@ Link showing functionality, usage and final deployment [here](https://thepetconn
 
 ## Future Development
 
-Dog escrow: Act as an intermediary between buyer and breeder to ensure safe and easy sales. Take a portion of sales
+**Dog escrow:** Act as an intermediary between buyer and breeder to ensure safe and easy sales. Take a portion of sales
 
-Robust Social Media: Allow users to interact with breeder posts and follow breeders or litters. Additionally, allow buyers / users to post photos of their dogs and give breeders the ability to
+**Robust Social Media:** Allow users to interact with breeder posts and follow breeders or litters. Additionally, allow buyers / users to post photos of their dogs and give breeders the ability to
 
 A. Keep tabs on past litters
 B. Provide breeders with ongoing and licensed social content and testimonial
 
-Vetting and validation: Buyers have the opportunity to submit medical records, AKC registration and other forms to further accredit their business
+**Vetting and validation:** Buyers have the opportunity to submit medical records, AKC registration and other forms to further accredit their business
 
 <a name="Screenshots"></a>
 
 ## Screenshots
 
-![Landing page search]<img src="/images/landing-screenshot.png">
+![Landing page search](/public/images/landing-screenshot.png)
 
 <a name="Questions"></a>
 
@@ -64,8 +64,8 @@ Vetting and validation: Buyers have the opportunity to submit medical records, A
 The authors' preferred method of contact is: Email
 
 Email us at:
-[David Rios](riosdavid16@gmail.com)
-[David Ryan](dryan10101@gmail.com)
-[haleymariehilton@gmail.com](Haley Hilton Zito)
-[joshjankowski@gmail.com](Josh Jankowski)
-[natestein@gmail.com](Nathan Stein)
+[David Rios](riosdavid16@gmail.com)<br>
+[David Ryan](dryan10101@gmail.com)<br>
+[Haley Hilton Zito](haleymariehilton@gmail.com)<br>
+[Josh Jankowski](joshjankowski@gmail.com)<br>
+[Nathan Stein](NathanStein@gmail.com)<br>
