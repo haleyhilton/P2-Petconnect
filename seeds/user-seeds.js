@@ -4,7 +4,7 @@ const userData = [
     {
         id: 1,
         username: 'alvindogs',
-        password: 'alvinpass',
+        password: '$2b$10$n5/g2ZLjXFJ6bR7z0bD3XulVuV3BmBQfG0xv9LjMDO8nNhf5e6ITm',
         email: 'alvin@gmail.com',
         first_name: 'Alvin',
         last_name: 'Sandoval',
