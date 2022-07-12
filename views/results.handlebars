@@ -1,3 +1,47 @@
+<div>
+    <form id="filter-form">
+        <label for="age-filter">Age</label>
+        <select id="age-filter" name="age">
+            <option value="all">All</option>
+            {{#each dogAgeList as |ageNum| }}
+            <option value="{{ageNum}}">{{ageNum}}</option>
+            {{/each}}
+        </select>
+
+        <label for="breed-filter">Breed</label>
+        <select id="breed-filter" name="breed">
+            <option value="all">All</option>
+            {{#each dogBreedList as |breed| }}
+            <option value="{{breed}}">{{breed}}</option>
+            {{/each}}
+        </select>
+
+        <label for="size-filter">Size</label>
+        <select id="size-filter" name="size">
+            <option value="all">All</option>
+            {{#each dogSizeList as |sizeNum| }}
+            <option value="{{sizeNum}}">{{sizeNum}}</option>
+            {{/each}}
+        </select>
+
+        <label for="sex-filter">Sex</label>
+        <select id="sex-filter" name="sex">
+            <option value="all">All</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        
+        <label for="color-filter">Color</label>
+        <select id="color-filter" name="color">
+            <option value="all">All</option>
+            {{#each dogColorList as |color| }}
+            <option value="{{color}}">{{color}}</option>
+            {{/each}}
+        </select>
+        <input id="filter-submit" type="submit" value="Apply">
+    </form>
+</div>
+
 {{#if dogs}}
 {{#each dogs as |dog| }}
 <div>
@@ -19,3 +63,5 @@ Description: {{dog.description}}
 {{#unless dogs}}
 <div>Be the first to post!  You can post from the dashboard once you have logged in!</div>
 {{/unless}}
+
+<script src="/js/results.js"></script>

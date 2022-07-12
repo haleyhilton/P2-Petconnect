@@ -1,8 +1,24 @@
 const router = require('express').Router();
-const { Dog, User } = require('../models');
+const { Dog } = require('../models');
 const dogColorList = require('../public/arrays/dogColors');
 const dogBreedList = require('../public/arrays/dogBreeds');
 const dogSizeList = require('../public/arrays/dogSizes');
+const dogAgeList = require('../public/arrays/dogAge');
+
+router.get('/', async (req, res) => {
+    const dogData = await Dog.findAll();
+
+    const dogs = dogData.map((project) => project.get({ plain: true }));
+
+    res.render('results', {
+        dogAgeList,
+        dogColorList,
+        dogBreedList,
+        dogSizeList,
+        dogs,
+        logged_in: req.session.logged_in,
+    });
+});
 
 router.get('/:age-:breed-:size-:sex-:color', async (req, res) => {
     //define filters manually
@@ -45,6 +61,10 @@ router.get('/:age-:breed-:size-:sex-:color', async (req, res) => {
     const dogs = dogData.map((project) => project.get({ plain: true }));
 
     res.render('results', {
+        dogAgeList,
+        dogColorList,
+        dogBreedList,
+        dogSizeList,
         dogs,
         logged_in: req.session.logged_in,
     });
