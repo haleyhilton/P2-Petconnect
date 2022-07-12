@@ -17,6 +17,8 @@ const profileHandler = async () => {
 
   profileHandler();
 
+<<<<<<< HEAD
+=======
   const dogHandler = async () => {
     const fetchURL = "/api/media/dog"
     const response = await fetch(fetchURL, {
@@ -34,3 +36,4 @@ const profileHandler = async () => {
   };
 
   dogHandler();
+>>>>>>> 1c980383c54b16eb42e84b5f5979eee7d0e3b470
