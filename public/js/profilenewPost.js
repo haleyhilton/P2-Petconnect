@@ -32,3 +32,4 @@ const newDogPost = async (data) => {
     const dogSex = document.querySelectorAll('input[name="dogSex"]:checked').value;
 
 }
+
