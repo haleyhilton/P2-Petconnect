@@ -28,6 +28,20 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//route to get current user id
+router.get('/current/user', async (req, res) => {
+  try {
+      const allUserData = await User.findAll({
+          where: {
+            id: req.session.user_id,
+          },
+      });
+      res.status(200).json(allUserData[0]);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 //route for logging in
 router.post('/login', async (req, res) => {
 try {

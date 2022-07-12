@@ -76,22 +76,24 @@
 
 
 {{!-- Section to display what dogs are for sell --}}
+{{#each dogs as |dog| }}
 <div class="userDog-container">
-   <h1 id="userDog-title">My friends looking for a home</h1>
+   <h1 class="userDog-title">My friends looking for a home</h1>
  <div class="dogs">
-    <img id="dog-profile" src="#">
-       <p>Name: {{dog_name}}</p> 
-       <p>Breed: {{dog_breed}}</p> 
-       <p>Age: {{dog_age}}</p> 
-       <p>Size: {{dog_size}}</p> 
-       <p>Sex: {{dog_sex}}</p> 
-       <p>Color: {{dog_color}}</p>  
-       <p>Description: {{dog_description}}</p> 
-       <p>{{#if dog_forsale}}For Sale!!{{/if}}</p>
+    <img class="dog-profile" src="#">
+       <p>Name: {{dog.name}}</p> 
+       <p>Breed: {{dog.breed}}</p> 
+       <p>Age: {{dog.age}}</p> 
+       <p>Size: {{dog.size}}</p> 
+       <p>Sex: {{dog.sex}}</p> 
+       <p>Color: {{dog.color}}</p>  
+       <p>Description: {{dog.description}}</p> 
+       <p>{{#if dog.forsale}}For Sale!!{{/if}}</p>
     {{!-- <img class="dog-profile" src="https://placedog.net/300/300?id=148">
     <img class="dog-profile" src="https://placedog.net/300/300?id=14"> --}}
  </div>
 </div>
+{{/each}}
 <div>
 </div>
 
