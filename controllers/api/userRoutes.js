@@ -80,4 +80,33 @@ router.post('/logout', (req, res) => {
     }
 });
 
+
+router.post('/', async (req, res) => {
+  try {
+      const bioPost = await User.create(req.body, {
+          where: {
+            id: req.session.id
+          }
+      })
+      res.status(200).json(bioPost)
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
+
+// updating a bio description
+router.put('/', async (req, res) => {
+  try {
+      const bioPost = await User.update(req.body, {
+          where: {
+            id: req.session.id
+          }
+      })
+      res.status(200).json(bioPost)
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
 module.exports = router;
