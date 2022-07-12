@@ -37,7 +37,10 @@ router.get("/user", async (req, res) => {
 
         const user = userData.map((photo) => photo.get({ plain: true }));
 
-        res.render('userpictures', {photos: user});
+        // res.render('userpictures', {photos: user});
+        res.status(200).json(user);
+        console.log(user)
+        console.log(req.session.user_id, "hello")
 
       } catch (err) {
         res.status(400).json(err);

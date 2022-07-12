@@ -37,7 +37,7 @@ const mediaData = [
         dog_id: 7
     },
     {
-        picture_url: 'a url',
+        picture_url: '',
         user_id: 8,
         dog_id: 8
     },
