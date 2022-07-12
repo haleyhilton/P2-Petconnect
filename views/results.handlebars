@@ -1,0 +1,21 @@
+{{#if dogs}}
+{{#each dogs as |dog| }}
+<div>
+
+Name: {{dog.name}}
+Age: {{dog.age}}
+Breed: {{dog.breed}}
+Size: {{dog.size}}
+Sex: {{dog.sex}}
+Color: {{dog.color}}
+Description: {{dog.description}}
+
+</div>
+<br>
+{{/each}}
+{{/if}}
+
+{{!-- if there aren't any dogs yet, this will appear --}}
+{{#unless dogs}}
+<div>Be the first to post!  You can post from the dashboard once you have logged in!</div>
+{{/unless}}
