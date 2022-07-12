@@ -67,7 +67,7 @@ const mediaData = [
         dog_id: 5
     },
     {
-        picture_url: './media/blackdog.PNG',
+        picture_url: './media/blackdog.jpg',
         user_id: null,
         dog_id: 6
     },
