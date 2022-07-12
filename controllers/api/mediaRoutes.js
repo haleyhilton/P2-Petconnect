@@ -5,9 +5,20 @@ const { request } = require("http");
 const session = require("express-session");
 
 // Returns profile pictures for a dog based on ID
-router.get("/dog/:id", async (req, res) => {
+router.get("/dog", async (req, res) => {
   try {
-    const dogData = await Media.findAll({ where: { dog_id: req.params.id } });
+    //find the user in userdog model
+    const userData = await UserDog.findAll({ where: { user_id: req.session.user_id } });
+
+    if (!userData) {
+      res.status(400).json({ message: 'No Profile Found' });
+      return;
+    }
+
+    const user = userData.map((photo) => photo.get({ plain: true }));
+    const currentUser = user[0].dog_id;
+
+    const dogData = await Media.findAll({ where: { dog_id: currentUser} });
 
       if (!dogData) {
         res.status(400).json({ message: 'No Profile Found' });
@@ -16,7 +27,8 @@ router.get("/dog/:id", async (req, res) => {
 
       const dog = dogData.map((photo) => photo.get({ plain: true }));
 
-      res.render('dogpictures', {photos: dog});
+      // res.render('dogpictures', {photos: dog});
+      res.status(200).json(dog);
 
     } catch (err) {
       res.status(400).json(err);
@@ -39,8 +51,8 @@ router.get("/user", async (req, res) => {
 
         // res.render('userpictures', {photos: user});
         res.status(200).json(user);
-        console.log(user)
-        console.log(req.session.user_id, "hello")
+        // console.log(user)
+        // console.log(req.session.user_id, "hello")
 
       } catch (err) {
         res.status(400).json(err);
