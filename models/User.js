@@ -36,6 +36,10 @@ User.init(
         isEmail: true, 
       },
     },
+    // bio: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
     first_name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -63,6 +67,10 @@ User.init(
   {
     hooks: {
       beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      }, 
+      beforeBulkCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       }, 
