@@ -5,10 +5,10 @@ const { request } = require("http");
 const session = require("express-session");
 
 // Returns profile pictures for a dog based on ID
-router.get("/dog", async (req, res) => {
+router.get("/doggie", async (req, res) => {
   try {
-    //find the user in userdog model
-    const userData = await UserDog.findAll({ where: { user_id: req.session.user_id } });
+    //find the user in dog model
+    const userData = await Dog.findAll({ where: { user_id: req.session.user_id } });
 
     if (!userData) {
       res.status(400).json({ message: 'No Profile Found' });
@@ -51,7 +51,7 @@ router.get("/user", async (req, res) => {
 
         // res.render('userpictures', {photos: user});
         res.status(200).json(user);
-        // console.log(user)
+        console.log(user)
         // console.log(req.session.user_id, "hello")
 
       } catch (err) {

@@ -23,13 +23,13 @@ window.addEventListener('click', function(e) {
     }
 })
 
-// TODO: need help figuring out syntax to get inputs to post in my friends section of profile page
-const newDogPost = async (data) => {
+// // TODO: need help figuring out syntax to get inputs to post in my friends section of profile page
+// const newDogPost = async (data) => {
 
-    const dogName = document.querySelector('#DogsName').value.trim();
-    const dogDob = document.querySelector('#dob').value.trim();
-    const dogBreed = document.querySelector('#breed').value.trim();
-    const dogSex = document.querySelectorAll('input[name="dogSex"]:checked').value;
+//     const dogName = document.querySelector('#DogsName').value.trim();
+//     const dogDob = document.querySelector('#dob').value.trim();
+//     const dogBreed = document.querySelector('#breed').value.trim();
+//     const dogSex = document.querySelectorAll('input[name="dogSex"]:checked').value;
 
-}
+// }
 
