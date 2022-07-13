@@ -63,7 +63,7 @@ B. Provide breeders with ongoing and licensed social content and testimonial
 
 The authors' preferred method of contact is: Email
 
-Email us at:
+Email us at:<br>
 [David Rios](riosdavid16@gmail.com)<br>
 [David Ryan](dryan10101@gmail.com)<br>
 [Haley Hilton Zito](haleymariehilton@gmail.com)<br>
