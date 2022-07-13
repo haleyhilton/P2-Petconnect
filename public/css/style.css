@@ -135,7 +135,7 @@ h2 {
 
 p {
   font-size: larger;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 
@@ -219,8 +219,6 @@ p {
   padding: 1rem;
   font-size: 22px;
   line-height: 1.25rem;
-  border: 1px solid #ddd;
-  border-radius: 20px;
   margin-top: 2rem;
 
 }
