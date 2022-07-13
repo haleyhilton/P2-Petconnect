@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const multer = require("multer");
-const { Media, User, Dog, UserDog } = require("../../models");
+const { Media, User, Dog, UserDog } = require("../models");
 const path = require("path");
 const { request } = require("http");
 const session = require("express-session");
@@ -32,7 +32,13 @@ router.post("/", upload.single("image"), async (req, res) => {
       dog_id: null,
     });
     media.save();
-    res.send("Image Uploaded");
+
+    // const mediaPut = await Media.findOne({ where: { user_id: req.session.user_id }})
+    // await mediaPut.update({ profile_url: fileName })
+
+    res.render('results', {
+      logged_in: req.session.logged_in,
+    });
   } catch {
     res.status(400).send("Failed");
   }
