@@ -9,4 +9,5 @@ router.use('/users', userRoutes);
 router.use('/upload', uploadRoutes);
 router.use('/media', mediaRoutes);
 
+
 module.exports = router;

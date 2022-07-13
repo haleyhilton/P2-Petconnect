@@ -6,8 +6,11 @@
     <img id="picture" src="#">
  </div>
 
- <h3 id="profile-name">{{user.first_name}} {{user.last_name}}</h3>
+
+ <h3 id="profile-name">Welcome, {{user.first_name}} {{user.last_name}}!</h3>
  <h5 id="rating">Rating: ⭐️⭐️⭐️⭐️⭐️</h5>
+ <h6>Email: {{user.email}}</h6>
+ <h6>Zip Code: {{user.zip_code}}</h6>
 
  {{!-- Possible api map showing location based of zip code with map displayed --}}
 {{!-- <div class="map-container">
@@ -15,14 +18,15 @@
 </div> --}}
 
 <div class="newPostModal-container">
-        <button id="newPostBtn">New post</button>
+        <button id="newPostBtn">Add a Dog!</button>
       <div id="newPostModal" class="newPostModal">
          <div class="postModal-content">
             <span class="close">&times;</span>
             <h1>New Dog Post!</h1>
             <div>
-               {{>dogupload}}
-               <form class="newPost">
+              {{>upload}}
+               {{!-- {{>dogupload}} --}}
+               {{!-- <form class="newPost">
                    <div class="form-group">
                      <label for="dog-name">Dog's Name: </label>
                      <input class="form-input" type="text" id="dog-name"/>
@@ -53,13 +57,11 @@
                    <div class="form-group">
                      <button id="postBtn" type="submit">Post!</button>
                    </div>
-               </form>
+               </form> --}}
             </div>
          </div>
       </div>
 </div>
-
-
 
 
 {{!-- Bio section for profile page  --}}
@@ -67,23 +69,32 @@
  <div class="bio">
     <h1>Bio</h1>
     <div id="bioInput">
-      <p></p>
+      <p>{{user.bio}}</p>
     </div>
-    <h3>Zip code: user.zipcode</h3>
  </div>
 </div>
 
 
 {{!-- Section to display what dogs are for sell --}}
+{{#each dogs as |dog| }}
 <div class="userDog-container">
-   <h1 id="userDog-title">My friends looking for a home</h1>
+   <h1 class="userDog-title">My friends looking for a home</h1>
  <div class="dogs">
-    <img id="dog-profile" src="https://placedog.net/300/300?id=139">
-    <img id="dog-profile" src="https://placedog.net/300/300?id=148">
-    <img id="dog-profile" src="https://placedog.net/300/300?id=14">
+    <img class="dog-profile" src="#">
+       <p>Name: {{dog.name}}</p> 
+       <p>Breed: {{dog.breed}}</p> 
+       <p>Age: {{dog.age}}</p> 
+       <p>Size: {{dog.size}}</p> 
+       <p>Sex: {{dog.sex}}</p> 
+       <p>Color: {{dog.color}}</p>  
+       <p>Description: {{dog.description}}</p> 
+       <p>{{#if dog.forsale}}For Sale!!{{/if}}</p>
+    {{!-- <img class="dog-profile" src="https://placedog.net/300/300?id=148">
+    <img class="dog-profile" src="https://placedog.net/300/300?id=14"> --}}
  </div>
 </div>
-<div cl
+{{/each}}
+<div>
 </div>
 
 <div id="contactBtn">
@@ -92,3 +103,4 @@
 
 <script src="/js/profilenewPost.js"></script>
 <script src="/js/profile.js"></script>
+<script src="/js/newDog.js"></script>
