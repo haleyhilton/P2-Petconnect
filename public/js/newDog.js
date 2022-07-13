@@ -83,7 +83,19 @@ const dogFormHandler = async (event) => {
   const dogSexFemale = document.querySelector("#female");
   const dogColor = document.querySelector("#dog-color").value.trim();
 
-  const data = {
+  
+
+  /* console.log(dogName, "Name");
+  console.log(dogSizes(), "Sizes"); */
+  let cUserId;
+
+  const getUser = await fetch('/api/users/current/user', {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((response) => cUserId = response.id);
+
+const data = {
     name: dogName,
     age: dogAge,
     breed: dogBreed,
@@ -92,18 +104,15 @@ const dogFormHandler = async (event) => {
     color: dogColor,
     description: "Enter Description Here",
     for_sale: false,
+    user_id: cUserId,
   };
 
-  console.log(dogName, "Name");
-  console.log(dogSizes(), "Sizes");
-
-  const fetch = await fetch("/api/dogs", {
+  const fetchcall = await fetch("/api/dogs", {
     method: "POST",
     body: JSON.stringify(data),
     headers: { "Content-Type": "application/json" },
   })
-    .then((response) => response.json())
-    .then((response) => console.log(response));
+  .then(document.location.assign('/profile'));
 };
 
 document.querySelector("#dog-submit").addEventListener("click", dogFormHandler);
