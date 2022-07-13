@@ -1,7 +1,8 @@
-const profilePicture = document.querySelector('#picture');
+const dogPicture = document.querySelector('#dog-profile');
 
-const profileHandler = async () => {
-    const response = await fetch('/api/media/user', {
+ const dogHandler = async () => {
+    const fetchURL = "/api/media/doggie"
+    const response = await fetch(fetchURL, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     }).then(response => {
@@ -9,9 +10,10 @@ const profileHandler = async () => {
     }).then(response => {
       // console.log(response[0].picture_url)
       // const newImage = document.createElement('img');
-      profilePicture.src = response[0].picture_url
+      dogPicture.src = response[0].picture_url
       // profilePicture.appendChild(newImage)
+      console.log(response[0].picture_url, "hello")
     });
   };
 
-  profileHandler();
+  dogHandler();

@@ -20,7 +20,7 @@
                 {{!-- <li class="nav-item mx-0 mx-lg-1"><button id="logout">Logout</button></li> --}}
                 <li class="nav-item mx-0 mx-lg-1"> 
                     <div class="dropdown">
-                     <button class="dropbtn"><a><img id="profile-image" src="https://picsum.photos/200/300?random=1" alt="Avatar" class="avatar"></a></button>
+                     <button class="dropbtn"><a><img id="profile-image" src="./media/womanwithdog.PNG" alt="Avatar" class="avatar"></a></button>
                      <div class="dropdown-content">
                      <a href="/profile">My Profile</a>
                      <a href="#">Settings</a>
@@ -68,12 +68,12 @@
         <!-- Masthead Subheading-->
         <p class="masthead-subheading font-weight-light mb-0">Start the search for your new fur-ever friend</p>
         <form role="form">
-            <div class="form-group">
-                <input type="text" class="form-control empty" id="iconified" placeholder="Search" />
-            </div>
+<div class="input-group rounded">
+  <input id="search-input" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <span class="input-group-text border-0" id="search-addon">
+    <i id="search-button" class="fas fa-search"></i>
+  </span>
+</div>
         </form>
-        {{#if logged_in}}
-        <script src="/js/logout.js"></script>
-        {{/if}}
         </body>
 </header>

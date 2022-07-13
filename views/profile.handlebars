@@ -3,12 +3,13 @@
 <div class="container">
 {{!-- TODO: Need to make picture uploadable --}}
  <div class="profile-picture">
-    <img id="picture" src="#">
+    <img id="picture" src="./media/womanwithdog.PNG">
  </div>
 
 
  <h3 id="profile-name">Welcome, {{user.first_name}} {{user.last_name}}!</h3>
  <h5 id="rating">Rating: ⭐️⭐️⭐️⭐️⭐️</h5>
+ {{>userupload}}
  <h6>Email: {{user.email}}</h6>
  <h6>Zip Code: {{user.zip_code}}</h6>
 

@@ -6,9 +6,9 @@ const userData = [
         username: 'username',
         password: '$2b$10$/PdU6oMiHClzUrvunmX8juQAa/iljuSHZR/uSIDRhhcSFWLlOWZoO',
         email: 'alvin@gmail.com',
-        bio: 'Notable Life Achievements: Can cook amazing instant noodles, semi-professional bathroom singer and I have never been in jail before (except if you count Monopoly) ',
-        first_name: 'Alvin',
-        last_name: 'Sandoval',
+        bio: 'I have a chihuahua puppy who is always super-charged and once did something terrible on my friends three-year-old in the middle of Starbucks.',
+        first_name: 'Krystal',
+        last_name: 'Ball',
         date_of_birth: '2022-06-29',
         zip_code: 92065,
         media_id: 1
