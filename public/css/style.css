@@ -212,7 +212,7 @@ p {
   font-size: 1.25rem;
 }
 
-input.empty {
+.input-group {
   font-style: normal;
   font-weight: 400;
   text-decoration: inherit;
