@@ -484,6 +484,10 @@ button {
 /* ================================================ */
 /* Styling for profile.handlebars */
 
+.container {
+  position: relative;
+}
+
 .profile-picture {
   display: flex;
   align-items: center;
@@ -503,17 +507,26 @@ button {
 }
 
 #profile-name {
-  position: relative;
-  bottom: 35px;
-  right: 85px;
+  position: absolute;
+  bottom: 1120px;
+  left: 600px;
   white-space: nowrap;
+  color: #251b68;
+  font-size: 45px;
 }
 
-#rating {
-  position: relative;
-  bottom: 135px;
-  left: 155px;
+
+.info-container {
+   border: solid;
+   width: 350px;
+   position: relative;
+   bottom: 50px;
+   right: 90px;
+   text-align: center;
+   background-color: #251b68;
+   color: white;
 }
+
 
 /* ========================================================= */
 /* Styling for new dog post content */
@@ -576,6 +589,13 @@ button {
   cursor: pointer;
 }
 
+#newPostBtn {
+  position: relative;
+  left: 45px;
+  background-color: #251b68;
+  color: white;
+}
+
 
 
 
@@ -583,11 +603,22 @@ button {
 
 .bio {
   position: relative;
-  bottom: 150px;
+  bottom: 275px;
   right: 15px;
   border-style: solid;
+  border-radius: 15px;
   height: fit-content;
   width: 1200px;
+}
+
+#bio-header {
+  margin-bottom: 50px;
+  padding: 15px;
+  color: white;
+  background-color: #251b68;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+
 }
 
 /* Styling for dog for sell container */
@@ -598,16 +629,15 @@ button {
   width: 1400px;
   text-align: center;
   margin: auto;
-  margin-top: 250px;
-  margin-bottom: 200px;
+  margin-bottom: 75px;
 }
 
-#userDog-title {
-  margin-bottom: 100px;
+.userDog-title {
+  margin-bottom: 75px;
   padding: 15px;
   color: white;
   background-color: #251b68;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .dogs {
@@ -622,6 +652,11 @@ button {
   height: 400px;
   width: 800px;
   object-fit: fill;
+}
+
+.dog-details {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Styling for contact form button */
