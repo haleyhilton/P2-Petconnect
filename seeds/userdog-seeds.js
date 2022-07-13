@@ -38,4 +38,4 @@ const userDogData = [
 
 const seedUserDogs = () => UserDog.bulkCreate(userDogData);
 
-module.exports = seedUserDogs;
+/* module.exports = seedUserDogs; */
