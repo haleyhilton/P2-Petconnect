@@ -76,6 +76,7 @@ const dogFormHandler = async (event) => {
   const dogName = document.querySelector("#dog-name").value.trim();
   const dogAge = document.querySelector("#dog-age").value.trim();
   const dogBreed = document.querySelector("#dog-breed").value.trim();
+  const dogDescription = document.querySelector("#dog-description").value.trim();
   const dogSizeSmall = document.querySelector("#small");
   const dogSizeMedium = document.querySelector("#medium");
   const dogSizeLarge = document.querySelector("#large");
@@ -102,7 +103,7 @@ const data = {
     size: dogSizes(),
     sex: dogSex(),
     color: dogColor,
-    description: "Enter Description Here",
+    description: dogDescription,
     for_sale: false,
     user_id: cUserId,
   };
