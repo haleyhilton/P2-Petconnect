@@ -10,10 +10,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/#topPage">Home</a>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Home</a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                        href="/results">Search</a></li>
+                        href="/loader">Browse</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                         href="#contact">Contact</a></li>
                 {{#if logged_in}}
@@ -69,13 +69,8 @@
         <p class="masthead-subheading font-weight-light mb-0">Start the search for your new fur-ever friend</p>
         <form role="form">
 <div class="input-group rounded">
-  <input id="search-input" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-  <span class="input-group-text border-0" id="search-addon">
-    <i id="search-button" class="fas fa-search"></i>
-  </span>
+  <a class="nav-link py-3 px-0 px-lg-3 rounded" href="/loader">Browse Dogs</a>
 </div>
         </form>
         </body>
 </header>
-
- <script src="/js/search.js"></script>
