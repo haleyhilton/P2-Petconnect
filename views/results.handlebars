@@ -1,4 +1,4 @@
-<div>
+<div class="results-center results-search-bar">
     <form id="filter-form">
         <label for="age-filter">Age</label>
         <select id="age-filter" name="age">
@@ -44,16 +44,20 @@
 
 {{#if dogs}}
 {{#each dogs as |dog| }}
-<div>
 
-Name: {{dog.name}}
-Age: {{dog.age}}
-Breed: {{dog.breed}}
-Size: {{dog.size}}
-Sex: {{dog.sex}}
-Color: {{dog.color}}
-Description: {{dog.description}}
-
+<div class="results-center container potato">
+<div class="results-left row">
+<p class="results-header results-words col-6"><span>{{dog.name}}</span></p>
+<p class="results-words col-6"><img class="results-words" src="images/results.PNG" width="100px" height="100px"></p>
+</div>
+<div class="results-right ">
+<p class="results-words col-12">Age: <span class="results-stats">{{dog.age}}</span></p>
+<p class="results-words col-12">Breed: <span class="results-stats">{{dog.breed}}</span></p>
+<p class="results-words col-12">Size: <span class="results-stats">{{dog.size}}</span></p>
+<p class="results-words col-12">Sex: <span class="results-stats">{{dog.sex}}</span></p>
+<p class="results-words col-12">Color: <span class="results-stats">{{dog.color}}</span></p>
+<p class="results-words col-12">Description: <span class="results-stats">{{dog.description}}</span></p>
+</div>
 </div>
 <br>
 {{/each}}
@@ -61,7 +65,7 @@ Description: {{dog.description}}
 
 {{!-- if there aren't any dogs yet, this will appear --}}
 {{#unless dogs}}
-<div>Be the first to post!  You can post from the dashboard once you have logged in!</div>
+<div class="results-words results-header results-first">Be the first to showcase your dog!</div>
 {{/unless}}
 
 <script src="/js/results.js"></script>

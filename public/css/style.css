@@ -135,7 +135,7 @@ h2 {
 
 p {
   font-size: larger;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 
@@ -219,8 +219,6 @@ p {
   padding: 1rem;
   font-size: 22px;
   line-height: 1.25rem;
-  border: 1px solid #ddd;
-  border-radius: 20px;
   margin-top: 2rem;
 
 }
@@ -665,4 +663,70 @@ button {
 #contactBtn {
   text-align: center;
   margin-bottom: 25px;
+}
+
+
+/* CSS FOR RESULTS */
+.results-search-bar {
+  margin-top: 0.75rem;
+}
+
+.results-center {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+}
+
+.potato {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40vw;
+  /* justify-content:space-between; */
+}
+
+.results-right{
+  /* display:flex; */
+  flex-direction:column;
+  width: 20vw;
+  padding-top: 2rem;
+}
+.results-words {
+  text-align: left;
+  font-weight: bold;
+  font-style: normal;
+}
+.results-words {
+  padding: 0px;
+  margin: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.results-words::first-letter {
+  font-size: 1.0rem;
+}
+.results-words> span::first-letter {
+  font-size: 2.0rem;
+}
+
+.results-header {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  color:#5dc7cb;
+  font-weight: bold;
+}
+
+.results-stats {
+  font-weight:500;
+}
+
+.results-first {
+  margin: 4rem;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.breed-link {
+  font-size: 2rem;
 }
