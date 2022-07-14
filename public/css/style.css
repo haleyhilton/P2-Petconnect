@@ -402,7 +402,18 @@ p {
 }
 
 
-/* TODO: Change Fonts, color and add background to login page */
+
+/* ============================================ */
+/* styling for profile menu */
+.dropdown-content {
+  background-color:rgb(243, 183, 70);
+      
+}
+
+
+
+
+
 /* Styling for login.hbs */
 /* ================================================ */
 /* ================================================ */
@@ -424,11 +435,6 @@ p {
   flex-direction: column;
   align-items: center;
 }
-
-/* #fbLoginbtn {
-
-} */
-
 
 
 /* ================================================ */
@@ -565,7 +571,7 @@ button {
 
 /* Modal Content/Box */
 .postModal-content {
-  background-color: #fefefe;
+  background-color: #251b68;
   margin: 15% auto;
   /* 15% from the top and centered */
   padding: 20px;
@@ -576,7 +582,7 @@ button {
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: rgb(243, 183, 70);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -589,14 +595,40 @@ button {
   cursor: pointer;
 }
 
+.dg-header {
+  margin-bottom: 50px;
+  color: rgb(243, 183, 70);
+}
+
+/* styling for fields in upload modal */
+/* .dg-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+#dg-upload {
+  color: rgb(243, 183, 70);
+}
+.form-group {
+  color: rgb(243, 183, 70);
+}
+
+#dog-submit {
+  background-color: rgb(243, 183, 70);
+  color: #251b68;
+  border-radius: 10px;
+  height: 75px;
+  width: 175px
+}
+
 #newPostBtn {
   position: relative;
   left: 45px;
   background-color: #251b68;
   color: white;
 }
-
-
 
 
 /* Styling for Bio section */
@@ -664,6 +696,9 @@ button {
   text-align: center;
   margin-bottom: 25px;
 }
+
+
+
 
 
 /* CSS FOR RESULTS */
