@@ -4,6 +4,7 @@ const router = require('express').Router();
 //Haley landing.handlebars routes for testing purposes
 router.get('/', async(req, res) => {
     const icons = [
+        {image: "/images/beagle.png", modal: "modal1", name: "Beagle"},
         {image: "/images/bulldog.png", modal: "modal2", name: "Bulldog"},
         {image: "/images/corgi.png", modal: "modal3", name: "Corgi"},
         {image: "/images/frenchy.png", modal: "modal4", name: "French Bulldog"},
